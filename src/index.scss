@@ -1,0 +1,56 @@
+//custom bootstrap
+$info: #1976d2;
+$warning: #ffc107;
+$danger: #d32f2f;
+$primary: #009688;
+$input-btn-focus-width: 0;
+$enable-rounded: false;
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+// own styles
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.app {
+  background: linear-gradient(to right bottom, #0f2027, #203a43, #2c5364);
+  min-width: 100vw;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.2rem;
+}
+
+.equal-key {
+  grid-column: 3/5;
+}
+
+button {
+  font-size: 2rem !important;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+  font-size: 3rem !important;
+  line-height: 3rem !important;
+}
+
+.del-key {
+  font-size: 2rem;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    background: $danger;
+    color: white;
+  }
+}
