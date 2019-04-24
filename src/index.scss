@@ -20,13 +20,14 @@ body {
   width: 100%;
   min-height: 100vh;
   height: 100%;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
-.grid {
+.keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0.2rem;
+  animation: slide-from-left 0.5s ease-in;
 }
 
 .equal-key {
@@ -53,4 +54,30 @@ textarea {
     background: $danger;
     color: white;
   }
+}
+
+@keyframes slide-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.display {
+  animation: slide-from-right 0.5s ease-in;
 }

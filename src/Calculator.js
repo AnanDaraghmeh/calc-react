@@ -77,7 +77,7 @@ class Calculator extends Component {
     return (
       <div className="row justify-content-center align-items-center">
         <main className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
-          <section>
+          <section className="display">
             <div className="input-group mb-1">
               <textarea
                 value={this.state.display}
@@ -93,7 +93,7 @@ class Calculator extends Component {
             </div>
           </section>
 
-          <section className="grid">
+          <section className="keys">
             <button onClick={this.memoryStore} className="btn btn-warning">
               MS
             </button>
